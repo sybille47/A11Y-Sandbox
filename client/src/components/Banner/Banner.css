@@ -3,12 +3,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
   height: 500px;
-  background: url('./a11y_banner.png') center/cover no-repeat;
-  margin-top: 2.5rem;
-
-  padding: 2rem 1rem;
-  width: 100%;
+  background: url("./a11y_banner.png") center/cover no-repeat;
+  margin-top: 1rem;
+  padding: 1rem 1rem;
   min-height: 50vh;
 }
 

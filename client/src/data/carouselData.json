@@ -1,0 +1,16 @@
+{
+  "slides": [
+    {
+      "src":"./assets/low.png",
+      "alt":"low contrast image with capital letters"
+    },
+    {
+      "src":"./assets/medium.png",
+      "alt":"medium contrast image with capital letters"
+    },
+    {
+      "src":"./assets/high.png",
+      "alt":"high contrast image with capital letters"
+    }
+  ]
+}
