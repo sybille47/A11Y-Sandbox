@@ -6,12 +6,6 @@ import FormDemo from "./components/SectionVisualAccess/FormDemo";
 
 import './App.css';
 
-import low from './assets/low.png';
-import medium from './assets/medium.png';
-import high from './assets/low.png';
-
-const IMAGES = [low, medium, high];
-
 
 function Section({ id, children, nextRef }) {
   const scrollToNext = () => {

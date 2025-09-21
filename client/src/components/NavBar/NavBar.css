@@ -1,0 +1,28 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  color: #454545;
+  padding: 0.5rem 1rem;
+  z-index: 1000;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 7rem;
+  list-style: none;
+  justify-content: center;
+}
+
+.navbar a {
+  color:#454545;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: inherit;
+  text-decoration: underline;
+}
