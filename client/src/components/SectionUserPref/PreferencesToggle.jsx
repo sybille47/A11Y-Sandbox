@@ -9,6 +9,7 @@ export default function UserPrefs() {
   const [responsive, setResponsive] = useState(false);
 
   return (
+    <section>
     <div className="user-prefs">
       <div className="pref-item" onClick={() => setDarkMode(!darkMode)}>
         <FontAwesomeIcon
@@ -37,5 +38,6 @@ export default function UserPrefs() {
         <span>Responsive Design</span>
       </div>
     </div>
+    </section>
   );
 }

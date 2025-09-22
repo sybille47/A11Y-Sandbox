@@ -1,20 +1,24 @@
-import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
 import Banner from "./components/Banner/Banner";
 import Intro from "./components/SectionIntro/Intro";
-// Add remaining SectionIntro files
+import WhyAccess from "./components/SectionIntro/WhyAccess";
+import HowAccess from "./components/SectionIntro/HowAccess";
+
 import ContrastDemo from "./components/SectionVisualAccess/ContrastDemo";
 import FormDemo from "./components/SectionVisualAccess/FormDemo";
 import PreferencesToggle from "./components/SectionUserPref/PreferencesToggle";
+import Progress from "./components/Progress/Progress";
 
-function Layout({ children, nextPath, prevPath }) {
+function Layout({ children, nextPath, prevPath, currentStep, totalSteps = 6 }) {
   const navigate = useNavigate();
 
   return (
     <div>
+      <Progress currentStep={currentStep} totalSteps={totalSteps} />
+
       {children}
 
-      {/* Navigation buttons */}
       <div className="nav-buttons-container">
         {prevPath && (
           <button
@@ -38,23 +42,59 @@ function Layout({ children, nextPath, prevPath }) {
 }
 
 export default function App() {
+  const totalSteps = 6;
+
   return (
-    <Router>
+    <>
       <NavBar />
       <Banner />
       <Routes>
         <Route
           path="/"
-            element={
-            <Layout nextPath="/contrast">
+          element={
+            <Layout nextPath="/why" currentStep={1} totalSteps={totalSteps}>
               <Intro />
-              </Layout>
+            </Layout>
           }
         />
+
+        <Route
+          path="/why"
+          element={
+            <Layout
+              prevPath="/"
+              nextPath="/how"
+              currentStep={2}
+              totalSteps={totalSteps}
+            >
+              <WhyAccess />
+            </Layout>
+          }
+        />
+
+        <Route
+          path="/how"
+          element={
+            <Layout
+              prevPath="/why"
+              nextPath="/contrast"
+              currentStep={3}
+              totalSteps={totalSteps}
+            >
+              <HowAccess />
+            </Layout>
+          }
+        />
+
         <Route
           path="/contrast"
           element={
-            <Layout prevPath="/" nextPath="/form">
+            <Layout
+              prevPath="/why"
+              nextPath="/form"
+              currentStep={4}
+              totalSteps={totalSteps}
+            >
               <ContrastDemo />
             </Layout>
           }
@@ -62,7 +102,12 @@ export default function App() {
         <Route
           path="/form"
           element={
-            <Layout prevPath="/contrast" nextPath="/prefs">
+            <Layout
+              prevPath="/contrast"
+              nextPath="/prefs"
+              currentStep={5}
+              totalSteps={totalSteps}
+            >
               <FormDemo />
             </Layout>
           }
@@ -70,12 +115,12 @@ export default function App() {
         <Route
           path="/prefs"
           element={
-            <Layout prevPath="/form">
+            <Layout prevPath="/form" currentStep={6} totalSteps={totalSteps}>
               <PreferencesToggle />
             </Layout>
           }
         />
       </Routes>
-    </Router>
+    </>
   );
 }
