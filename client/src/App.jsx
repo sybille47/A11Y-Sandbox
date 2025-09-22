@@ -1,45 +1,81 @@
-import React, { useRef } from "react";
-import NavBar from './components/NavBar/NavBar';
-import Banner from './components/Banner/Banner';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
+import NavBar from "./components/NavBar/NavBar";
+import Banner from "./components/Banner/Banner";
+import Intro from "./components/SectionIntro/Intro";
+// Add remaining SectionIntro files
 import ContrastDemo from "./components/SectionVisualAccess/ContrastDemo";
 import FormDemo from "./components/SectionVisualAccess/FormDemo";
+import PreferencesToggle from "./components/SectionUserPref/PreferencesToggle";
 
-import './App.css';
+function Layout({ children, nextPath, prevPath }) {
+  const navigate = useNavigate();
 
-
-function Section({ id, children, nextRef }) {
-  const scrollToNext = () => {
-    nextRef?.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  return (
-    <section id={id}>
-      <div>{children}</div>
-      {nextRef && <button onClick={scrollToNext}>Next ↓</button>}
-    </section>
-  );
-}
-
-function App() {
   return (
     <div>
-      <NavBar />
-      <Banner />
-      <ContrastDemo />
-      <FormDemo />
+      {children}
 
-
-      {/* <section id="user-prefs">
-          <h2 className="section-title">
-            <span className="section-number">03</span>
-            User Preferences
-          </h2>
-          <div className="section-content">
-            <UserPrefs /> {/* 👈 render here */}
-      {/* </div> */}
-      {/* </section> */}
+      {/* Navigation buttons */}
+      <div className="nav-buttons-container">
+        {prevPath && (
+          <button
+            className="nav-button back-button"
+            onClick={() => navigate(prevPath)}
+          >
+            ← Back
+          </button>
+        )}
+        {nextPath && (
+          <button
+            className="nav-button next-button"
+            onClick={() => navigate(nextPath)}
+          >
+            Next →
+          </button>
+        )}
+      </div>
     </div>
   );
 }
 
-export default App;
+export default function App() {
+  return (
+    <Router>
+      <NavBar />
+      <Banner />
+      <Routes>
+        <Route
+          path="/"
+            element={
+            <Layout nextPath="/contrast">
+              <Intro />
+              </Layout>
+          }
+        />
+        <Route
+          path="/contrast"
+          element={
+            <Layout prevPath="/" nextPath="/form">
+              <ContrastDemo />
+            </Layout>
+          }
+        />
+        <Route
+          path="/form"
+          element={
+            <Layout prevPath="/contrast" nextPath="/prefs">
+              <FormDemo />
+            </Layout>
+          }
+        />
+        <Route
+          path="/prefs"
+          element={
+            <Layout prevPath="/form">
+              <PreferencesToggle />
+            </Layout>
+          }
+        />
+      </Routes>
+    </Router>
+  );
+}

@@ -1,5 +1,4 @@
 /* css for ContrastDemo */
-
 .contrast-cards {
   display: flex;
   justify-content: center;
@@ -76,7 +75,7 @@
 }
 
 .dot.active {
-  background: #48749E; /* blue when active */
+  background: #48749E;
 }
 
 /* 📱 Mobile adjustments */
@@ -86,7 +85,7 @@
     height: auto;
   }
 }
-/* Visually hidden text for screen readers */
+/* a11y feature - screen readers*/
 .sr-only {
   position: absolute;
   width: 1px;
@@ -101,7 +100,6 @@
 
 
 /* css for FormDemo, BadForm & GoodForm */
-/* Wrap for demo section */
 .accessibility {
   padding: 2rem 1rem;
   max-width: 1000px;
@@ -139,8 +137,6 @@
   color: #454545;
 }
 
-/* NEW */
-/* Side-by-side form + explanation */
 .form-row {
   width: 50vw;;
   display: flex;
@@ -149,39 +145,8 @@
   margin-top: 2rem;
 }
 
-/* Form on the left */
 .form-container {
   flex: 1;
-}
-
-.input-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  border: #454545;
-}
-
-
-.input-form input,
-.input-form button {
-  padding: 0.5rem;
-  font-size: 1rem;
-}
-
-/* Side-by-side form + explanation */
-.form-row {
-  display: flex;
-  gap: 2rem;
-  align-items: flex-start;
-}
-
-/* Form on the left */
-.form-container {
-  flex: 1;
-}
-
-.checkbox input {
-  margin-right: 10px;
 }
 
 .input-form {
@@ -198,10 +163,14 @@
   font-size: 1rem;
 }
 
+.checkbox input {
+  margin-right: 10px;
+}
+
 .bad-form input {
   border: 1px solid #ccc;
   background: #f3f4f6;
-  color: #9ca3af; /* low contrast gray */
+  color: #9ca3af;
 }
 
 .save-button {
@@ -217,7 +186,6 @@
   background: #1e40af;
 }
 
-/* Explanatory text on the right */
 .explanation {
   flex: 1;
   text-align: start;
@@ -232,7 +200,7 @@
 .toggle-form-btn {
   margin-top: 1rem;
   padding: 0.5rem 1rem;
-  background: #48749E; /* orange */
+  background: #48749E;
   color: #fff;
   border: none;
   border-radius: 0.375rem;
@@ -251,58 +219,14 @@ label {
   border: 1px red;
 }
 
-/*
-.form-demo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.form-container {
-  flex-direction: column;
-}
-.explanation p {
-  border: 1px solid #454545;
-}
-.input-form {
-  border: solid red;
-}
-
-
-Form/demo area on the right */
 .demo-area {
   flex: 1;
   padding: 1.5rem;
 }
 
-
-
-/* Forms */
-/* .input-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
 }
 
-.input-form input,
-.input-form button {
-  padding: 0.5rem;
-  font-size: 1rem;
-}
-
-.save-button {
-  background: #2563eb;
-  color: white;
-  border: none;
-  border-radius: 0.375rem;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-} */
-
-/* .save-button:hover {
-  background: #1e40af;
-}
-
-/* 📱 Mobile view: stack description UNDER demo */
+/* responsive */
 @media (min-width: 768px) {
   .section-content {
     flex-direction: row;
