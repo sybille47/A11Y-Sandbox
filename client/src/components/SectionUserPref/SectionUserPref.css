@@ -1,4 +1,3 @@
-
 .user-prefs {
   width: 100%;
   max-width: 400px;
@@ -41,6 +40,16 @@
 }
 
 .dark-mode {
+  background: #111827;
+  color: #e5e7eb;
+}
+
+.dark-mode .user-prefs,
+.dark-mode .section-content,
+.dark-mode .section-title,
+.dark-mode .description,
+.dark-mode .pref-item,
+.dark-mode h3 {
   background: #111827;
   color: #e5e7eb;
 }

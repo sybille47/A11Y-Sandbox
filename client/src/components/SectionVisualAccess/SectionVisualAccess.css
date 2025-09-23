@@ -17,6 +17,7 @@
   font-size: 36px;
   letter-spacing: 0.3rem;
 }
+
 /* carousel */
 .carousel {
   display: flex;
@@ -29,7 +30,7 @@
 .carousel-image {
   width: 400px;
   height: 250px;
-  overflow: hidden;
+  /* overflow: hidden; */
   border-radius: 0.5rem;
   border: 1px solid #e5e7eb;
   background: #fff;
@@ -77,6 +78,27 @@
 .dot.active {
   background: #48749E;
 }
+/* pop up image in contrast cards */
+  .image-popup {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.75);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  animation: fadeInOut 10.5s ease forwards;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateX(-50%) translateY(10px); }
+  10% { opacity: 1; transform: translateX(-50%) translateY(0); }
+  90% { opacity: 1; }
+  100% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+}
 
 /* 📱 Mobile adjustments */
 @media (max-width: 768px) {
@@ -92,7 +114,7 @@
   height: 1px;
   padding: 0;
   margin: -1px;
-  overflow: hidden;
+  /* overflow: hidden; */
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
@@ -156,6 +178,7 @@
   flex-direction: column;
   gap: 1rem;
   border: 1px solid #454545;
+  border-radius: 0.5rem;
   padding: 1rem;
 }
 
@@ -185,7 +208,7 @@
 }
 
 .save-button:hover {
-  background: #1e40af;
+  background: #A3A3A3;
 }
 
 .explanation {
@@ -200,20 +223,24 @@
 
 /* Toggle button */
 .toggle-form-btn {
+  width: 10rem;
+  height: 5rem;
   margin-top: 0.3rem;
-  padding: 0.5rem 4.5rem;
-  background: #48749E;
-  color: #fff;
+  margin-left: 1rem;
+  padding: 1px 1px;
+  background: #FA9819;
+  color: #000;
   border: none;
-  border-radius: 0.375rem;
+  border-radius: 50px;
   cursor: pointer;
   font-weight: 600;
   font-size: 20px;
   font-family: "Rethink Sans", sans-serif;
+  top: 50%;
 }
 
 .toggle-form-btn:hover {
-  background: #1E3D59;
+  background: #DEEEFE;
 }
 
 /* GoodForm input */
@@ -224,8 +251,15 @@ label {
 .demo-area {
   flex: 1;
   padding: 1.5rem;
+  display: flex;
+  /* border: dashed; */
+  margin-left: 100px;
 }
 
+.demo-area-carousel {
+  flex: 1;
+  padding: 1.5rem;
+  display: flex;
 }
 
 /* responsive */
@@ -242,12 +276,20 @@ label {
   .description {
     text-align: left;
   }
+}
+.code-content {
+  margin-top: 2rem; /* spacing from demo-area */
+}
 
-  .demo-area {
+  /* 🔒 Restrict ordering to the first section-content */
+  .section-content:first-of-type .demo-area {
     order: 1;
   }
 
-  .description {
+  .section-content:first-of-type .description {
     order: 2;
   }
+.code-snippets {
+  width: 50%;
+  height: auto;
 }

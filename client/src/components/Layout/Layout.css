@@ -43,3 +43,66 @@
 .back-button:hover {
   background-color: #DEEEFE;
 }
+
+
+/* dark mode */
+/* Global Light/Dark mode */
+.light-mode {
+  background: #ffffff;
+  color: #111827;
+}
+
+.dark-mode {
+  background: #111827;
+  color: #e5e7eb;
+}
+
+/* Example: Navbar styling */
+.dark-mode .navbar {
+  background: #1f2937; /* darker gray */
+  color: #f9fafb; /* near white */
+}
+
+.light-mode .navbar {
+  background: #f9fafb;
+  color: #111827;
+}
+
+/* Example: Layout container */
+.dark-mode .layout {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+.light-mode .layout {
+  background: #ffffff;
+  border-color: #d1d5db;
+}
+
+/* Light Mode */
+.light-mode .bottom-banner {
+  background: #ffffff;
+  border-top: 1px solid #ddd;
+}
+
+.light-mode .nav-button {
+  background-color: #ffffff;
+  color: #111827;
+}
+
+/* Dark Mode */
+.dark-mode .bottom-banner {
+  background: #1f2937;
+  border-top: 1px solid #374151;
+  color: #e5e7eb;
+}
+
+.dark-mode .nav-button {
+  background-color: #374151;
+  color: #f9fafb;
+}
+
+.dark-mode .nav-button:hover {
+  background-color: #4b5563;
+}
+

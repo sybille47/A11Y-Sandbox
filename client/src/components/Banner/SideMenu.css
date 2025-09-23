@@ -1,0 +1,116 @@
+
+/* side menu */
+/* Container for the side menu */
+.side-menu {
+  position: absolute;       /* Anchor beside the banner */
+  top: 0;                   /* Align with top of banner */
+  left: -0px;
+  height: 100%;             /* Expand full height if needed */
+  padding: 2rem 1rem;
+  background: #f9fafb;      /* Subtle background */
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;                /* Space between items */
+  z-index: 900;
+}
+
+/* Style the list */
+.side-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.side-menu li {
+  margin: 0;
+}
+
+.side-menu a {
+  text-decoration: none;
+  text-align: left;
+  color: #454545;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s;
+  justify-content: space-between;
+}
+
+.side-menu a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+.menu-toggle {
+  border: none;
+  background: transparent;
+  text-decoration: none;
+  text-align: left;
+  color: #454545;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s;
+  font-family: "Rethink Sans", sans-serif;
+
+}
+
+/* Global Light/Dark mode */
+.light-mode {
+  background: #ffffff;
+  color: #111827;
+}
+
+.dark-mode {
+  background: #111827;
+  color: #e5e7eb;
+}
+
+/* Example: Navbar styling */
+.dark-mode .navbar {
+  background: #1f2937; /* darker gray */
+  color: #f9fafb; /* near white */
+}
+
+.light-mode .navbar {
+  background: #f9fafb;
+  color: #111827;
+}
+
+/* Example: Layout container */
+.dark-mode .layout {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+.light-mode .layout {
+  background: #ffffff;
+  border-color: #d1d5db;
+}
+
+/* Default Light Mode */
+.light-mode .side-menu {
+  background: #f9fafb;
+  color: #111827;
+}
+
+.light-mode .side-menu a,
+.light-mode .menu-toggle {
+  color: #454545;
+}
+
+/* Dark Mode */
+.dark-mode .side-menu {
+  background: #111827;
+  border-right: 1px solid #374151;
+  color: #e5e7eb;
+}
+
+.dark-mode .side-menu a,
+.dark-mode .menu-toggle {
+  color: #e5e7eb;
+}
+
+.dark-mode .side-menu a:hover,
+.dark-mode .menu-toggle:hover {
+  color: #facc15; /* optional: yellow highlight */
+}

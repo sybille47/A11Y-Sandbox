@@ -36,27 +36,7 @@
   text-align: left;
 }
 
-.small-banner {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start; /* desktop: left aligned */
-  width: calc(100vw - 200px);
-  position: relative;
-  height: 100px;
-  background: url("./a11y_banner.png") center/cover no-repeat;
-  margin-top: 1rem;
-  padding: 1rem 1rem;
-  /* z-index: 1000; stays on top */
-}
-.small-banner h2 {
-  font-size: clamp(1.5rem, 3vw, 7.5rem);
-  margin: 0;
-  margin-top: 2rem;
-  margin-left: 12rem; /* desktop offset */
-  color: #fff;
-  text-align: left;
-}
+
 
 /* Larger screen tweak */
 @media (min-height: 900px) {
@@ -86,57 +66,3 @@
 }
 
 
-/* side menu */
-/* Container for the side menu */
-.side-menu {
-  position: absolute;       /* Anchor beside the banner */
-  top: 0;                   /* Align with top of banner */
-  left: -0px;
-  height: 100%;             /* Expand full height if needed */
-  padding: 2rem 1rem;
-  background: #f9fafb;      /* Subtle background */
-  border-right: 1px solid #ddd;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1rem;                /* Space between items */
-  z-index: 900;
-}
-
-/* Style the list */
-.side-menu ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.side-menu li {
-  margin: 0;
-}
-
-.side-menu a {
-  text-decoration: none;
-  text-align: left;
-  color: #454545;
-  font-size: 1rem;
-  font-weight: 500;
-  transition: color 0.2s;
-  justify-content: space-between;
-}
-
-.side-menu a:hover {
-  color: #000;
-  text-decoration: underline;
-}
-.menu-toggle {
-  border: none;
-  background: transparent;
-  text-decoration: none;
-  text-align: left;
-  color: #454545;
-  font-size: 1rem;
-  font-weight: 500;
-  transition: color 0.2s;
-  font-family: "Rethink Sans", sans-serif;
-
-}

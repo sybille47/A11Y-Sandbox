@@ -155,3 +155,16 @@
     padding-bottom: 1rem;
   }
 }
+
+/* dark mode */
+
+
+
+.dark-mode .cards > div {
+  background: #1f2937;
+  color: #fff;
+}
+
+.dark-mode .cards > div em {
+  color: #fff;
+}

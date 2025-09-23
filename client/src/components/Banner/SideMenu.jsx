@@ -1,7 +1,7 @@
 // components/SideMenu.js
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./Banner.css";
+import "./SideMenu.css";
 
 export default function SideMenu() {
   const [openMenu, setOpenMenu] = useState(null);
@@ -70,6 +70,7 @@ export default function SideMenu() {
               <li><Link to="/form">Events</Link></li>
               <li><Link to="/form">Contact Forms</Link></li>
               <li><Link to="/form">Audio & Video</Link></li>
+              <li><Link to="/form">Assistive technologies</Link></li>
             </ul>
           )}
         </li>

@@ -1,0 +1,101 @@
+/* Hide text visually but keep it for screen readers */
+* {
+  font-family: "Rethink Sans", sans-serif;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+
+form-row {
+  width: 50vw;;
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-top: 0.5px;
+}
+
+.form-container {
+  flex: 1;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1px;
+  border-radius: 0.5rem;
+  /* padding: 1rem; */
+}
+
+/* Checkbox container */
+.checkbox {
+  display: flex;
+  align-items: center; /* vertically centers checkbox & label */
+  gap: 0.5rem; /* space between checkbox and text */
+}
+
+/* Make sure checkbox itself is visible & easy to click */
+.checkbox input[type="checkbox"] {
+  width: 1.2rem;
+  height: 1.2rem;
+  accent-color: #005fcc; /* modern browsers: customize check color */
+  cursor: pointer;
+}
+
+/* Label clickable area */
+.checkbox label {
+  cursor: pointer;
+}
+.save-button {
+  background: #1E3D59;
+  color: #fff;
+}
+
+/* Focus styles for keyboard users */
+input:focus,
+.save-button:focus {
+  outline: 3px solid #005fcc; /* high contrast */
+  outline-offset: 2px;
+}
+.error {
+  color: #b00020; /* high contrast red */
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.status-message {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #005fcc; /* or green for success */
+}
+
+/* Toggle button */
+.toggle-form-btn {
+  width: 10rem;
+  height: 5rem;
+  margin-top: 0.3rem;
+  margin-left: 1rem;
+  padding: 1px 1px;
+  background: #FA9819;
+  color: #000;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 20px;
+  font-family: "Rethink Sans", sans-serif;
+  top: 50%;
+}
+
+.toggle-form-btn:hover {
+  background: #DEEEFE;
+}

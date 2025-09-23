@@ -46,7 +46,7 @@ export default function Intro() {
               },
               {
                 title: "Situational",
-                text: "Situational disabilities are disabilities that wouldn’t normally be called disability, but they are scenarios where one needs similar accommodations as someone with a permanent or temporary disability such as using a phone one-handed while holding a baby."
+                text: "Situational disabilities are scenarios where one needs accommodations, fo example when using a phone one-handed while holding a baby."
               }
             ].map((card, i) => (
               <div

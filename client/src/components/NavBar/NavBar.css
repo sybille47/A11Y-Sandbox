@@ -5,13 +5,21 @@
   left: 0;
   width: 100%;
   background: #fff;
-  color: #454545;
+  /* color: #454545; */
   padding: 0.5rem 1rem;
   z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 0.5px solid #ddd;
+}
+.light-mode .navbar {
+  /* color: #454545; */
+  color: red;
+}
+
+.dark-mode .navbar {
+  color: #fff;
 }
 
 .logo {
@@ -90,4 +98,31 @@
   .hamburger {
     display: flex; /* Show hamburger on mobile */
   }
+}
+
+/* Light Mode */
+ . {
+  background: #ffffff;
+  border-top: 1px solid #ddd;
+}
+
+.light-mode .nav-button {
+  background-color: #ffffff;
+  color: #111827;
+}
+
+/* Dark Mode */
+.dark-mode .bottom-banner {
+  background: #1f2937;
+  border-top: 1px solid #374151;
+  color: #e5e7eb;
+}
+
+.dark-mode .nav-button {
+  background-color: #374151;
+  color: #f9fafb;
+}
+
+.dark-mode .nav-button:hover {
+  background-color: #4b5563;
 }

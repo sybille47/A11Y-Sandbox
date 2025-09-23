@@ -1,5 +1,5 @@
 import SideMenu from './SideMenu';
-import './Banner.css';
+import './SmallBanner.css';
 
 export default function Banner() {
   return (

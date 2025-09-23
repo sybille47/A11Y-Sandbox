@@ -13,66 +13,36 @@ export default function ToolsRefs () {
               </div>
 
               <div className="description">
-                <strong>Testing tools</strong>
-              <ul>
-                <li>Tools for automated testing</li>
-                <li>Testing: use assistive tools</li>
-                <li>AI assistance</li>
-                    <li>Dev tools, e.g. contrast checkers https://webaim.org/resources/contrastchecker/</li>
-                    <li>Cmd shift c contrast (PC: ctrl shift c)</li>
-              </ul>
-
+              <strong>Tools for testing and debugging</strong>
               <p>
-                Testing Library has the guiding principle of: “The more your
-                tests resemble the way your software is used, the more
-                confidence they can give you.” You can have a rule that if we
-                cannot find the element without using getByTestId, then it is
-                not an accessible element. The following is an example of a
-                test with keyboard and screen reader:
-                » You are building a menu element. You know that this
-                is an interactive button that opens a list. We can use
-                getByRole(“button”). Screen reader reads
-                it as a button, and a keyboard user can navigate to it
-                •
-                Adding accessibility tests such as part of your unit testing
-                framework using Axe-chai
-                •
-                Using static code analysis such as Eslint plugin for JSX to
-                check if you are using the correct markup
-                •
+                Most browsers have accessibility tools that are already available by default:
+                <br />
+                In general, these are used for:
+              </p>
+              <ul>
+                <li>Checking correct markup and the accessibility tree</li>
+                <li>Checking contrast</li>
+                <li>Simulating color blindness and low vision</li>
+              </ul>
+              <br />
+              <p>
                 For a full page analysis that you can also integrate in
                 your CI pipeline:
-
-                » Pa11y
-                » Lighthouse -> Chrome, Lighthouse tab score of 0 - 100
-                » Axe
-                Debugging
-                Tools that are already available by default in your browser:
-                •
-                Accessibility features in Microsoft Edge Dev Tools
-                •
-                Accessibility features in Google Chrome Dev Tools
-                •
-                Accessibility features in Firefox’s Developer Tools
-                In general, these are used for:
-                •
-                Checking correct markup and the accessibility tree
-                •
-                Checking contrast
-                •
-                Simulating color blindness and low vision
-
-
-                Test keyboard accessibility
+                </p>
+                <ul>
+                  <li>Pa11y</li>
+                  <li>Lighthouse Chrome</li>
+                  <li>Axe</li>
+                </ul>
+                <br />
+                <strong>Test keyboard accessibility</strong>
+                <p>
                 To test if your service is accessible using the keyboard, you
                 can try to navigate without your mouse. All available features
                 must be accessible.
                 Note: the focus must be visible enough on all
                 focusable elements.
-
               </p>
-
-
               </div>
             </div>
           </section>

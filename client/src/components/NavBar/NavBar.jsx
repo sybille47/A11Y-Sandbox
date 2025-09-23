@@ -24,7 +24,7 @@ export default function Navbar() {
 
       {/* Nav links */}
       <ul className={`nav-links ${isOpen ? "show" : ""}`}>
-        <li><a href="home">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li><a href="tools">Tools & References</a></li>
       </ul>
     </nav>
