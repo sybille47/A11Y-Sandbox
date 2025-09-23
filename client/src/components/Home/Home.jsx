@@ -1,10 +1,7 @@
-import Banner from './components/Banner/Banner'
 import './Home.css';
 
 export default function Home () {
   return (
-    <>
-  <Banner />
     <section id="intro" className="accessibility">
             <h2 className="section-title">
               <span className="section-number"></span> Welcome to the A11Y Sandbox! 🎯
@@ -35,6 +32,5 @@ export default function Home () {
               </div>
             </div>
           </section>
-        </>
   );
 }

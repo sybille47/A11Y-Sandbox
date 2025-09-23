@@ -14,13 +14,15 @@
   /* margin-left: 200px; */
   padding: 1rem 1rem;
   /* min-height: 50vh; */
+  /* border-bottom: 1px solid #ddd; */
 }
 
 
 .banner h1 {
   font-size: clamp(2.5rem, 6vw, 7.5rem);
   margin: 0;
-  margin-left: 10rem; /* desktop offset */
+  margin-top: 2rem;
+  margin-left: 12rem; /* desktop offset */
   color: #fff;
   text-align: left;
 }
@@ -28,9 +30,31 @@
 .banner .tagline {
   font-size: clamp(1rem, 2vw, 1.5rem);
   color: #f3f4f6;
-  margin-top: 1rem;
+  /* margin-top: 0.1rem; */
   max-width: 40rem;
   margin-left: 14rem; /* desktop offset */
+  text-align: left;
+}
+
+.small-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* desktop: left aligned */
+  width: calc(100vw - 200px);
+  position: relative;
+  height: 100px;
+  background: url("./a11y_banner.png") center/cover no-repeat;
+  margin-top: 1rem;
+  padding: 1rem 1rem;
+  z-index: 1000; /* stays on top */
+}
+.small-banner h2 {
+  font-size: clamp(1.5rem, 3vw, 7.5rem);
+  margin: 0;
+  margin-top: 2rem;
+  margin-left: 12rem; /* desktop offset */
+  color: #fff;
   text-align: left;
 }
 
@@ -67,7 +91,7 @@
 .side-menu {
   position: absolute;       /* Anchor beside the banner */
   top: 0;                   /* Align with top of banner */
-  left: -100px;
+  left: -0px;
   height: 100%;             /* Expand full height if needed */
   padding: 2rem 1rem;
   background: #f9fafb;      /* Subtle background */

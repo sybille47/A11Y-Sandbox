@@ -3,9 +3,8 @@ import './Banner.css';
 
 export default function Banner() {
   return (
-    <header className="banner">
-      <h1>A11Y Sandbox</h1>
-      <p className="tagline">An interactive playground for accessibility</p>
+    <header className="small-banner">
+      <h2>A11Y Sandbox</h2>
       <SideMenu />
     </header>
   );
