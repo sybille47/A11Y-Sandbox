@@ -1,6 +1,10 @@
 .progress-container {
   margin: 1rem 0 2rem;
   text-align: center;
+  position: fixed !important;
+  bottom: 20px !important;
+  left: 50% !important;
+  transform: translateX(-50%);
 }
 
 .progress-text {

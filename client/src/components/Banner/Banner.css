@@ -1,38 +1,118 @@
+
+/* banner */
 .banner {
+  /* z-index: 1000; */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  width: 100vw;
+  align-items: flex-start; /* desktop: left aligned */
+  width: calc(100vw - 200px);
   position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  height: 500px;
+  height: 200px;
   background: url("./a11y_banner.png") center/cover no-repeat;
   margin-top: 1rem;
+  /* margin-left: 200px; */
   padding: 1rem 1rem;
-  min-height: 50vh;
+  /* min-height: 50vh; */
 }
+
 
 .banner h1 {
   font-size: clamp(2.5rem, 6vw, 7.5rem);
   margin: 0;
+  margin-left: 10rem; /* desktop offset */
   color: #fff;
-  text-align: center;
+  text-align: left;
 }
 
 .banner .tagline {
   font-size: clamp(1rem, 2vw, 1.5rem);
   color: #f3f4f6;
-  text-align: center;
   margin-top: 1rem;
   max-width: 40rem;
+  margin-left: 14rem; /* desktop offset */
+  text-align: left;
 }
 
+/* Larger screen tweak */
 @media (min-height: 900px) {
   .banner {
     min-height: 60vh;
   }
+}
+
+/* ✅ Mobile responsiveness */
+@media (max-width: 768px) {
+  .banner {
+    align-items: center; /* center content */
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .banner h1 {
+    margin-left: 0; /* remove desktop offset */
+    text-align: center;
+  }
+
+  .banner .tagline {
+    margin-left: 0; /* remove desktop offset */
+    text-align: center;
+    padding: 0 1rem; /* add breathing room */
+  }
+}
+
+
+/* side menu */
+/* Container for the side menu */
+.side-menu {
+  position: absolute;       /* Anchor beside the banner */
+  top: 0;                   /* Align with top of banner */
+  left: -100px;
+  height: 100%;             /* Expand full height if needed */
+  padding: 2rem 1rem;
+  background: #f9fafb;      /* Subtle background */
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;                /* Space between items */
+  z-index: 900;
+}
+
+/* Style the list */
+.side-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.side-menu li {
+  margin: 0;
+}
+
+.side-menu a {
+  text-decoration: none;
+  text-align: left;
+  color: #454545;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s;
+  justify-content: space-between;
+}
+
+.side-menu a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+.menu-toggle {
+  border: none;
+  background: transparent;
+  text-decoration: none;
+  text-align: left;
+  color: #454545;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s;
+  font-family: "Rethink Sans", sans-serif;
+
 }

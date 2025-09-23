@@ -2,7 +2,7 @@ import './Intro.css';
 
 export default function Intro () {
   return (
-    <section className="accessibility">
+    <section id="intro" className="accessibility">
             <h2 className="section-title">
               <span className="section-number">01</span> Introduction
             </h2>

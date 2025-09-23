@@ -7,7 +7,7 @@ export default function FormDemo() {
   const [showGoodForm, setShowGoodForm] = useState(false);
 
   return (
-    <section className="accessibility">
+    <section id="forms" className="accessibility">
       <div className="section-content">
       <h3 className="subheading">Input forms</h3>
 

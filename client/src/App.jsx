@@ -1,21 +1,26 @@
 import { Routes, Route, useNavigate } from "react-router-dom";
+import Home from "./components/Home/Home";
 import NavBar from "./components/NavBar/NavBar";
-import Banner from "./components/Banner/Banner";
+// import Banner from "./components/Banner/Banner";
 import Intro from "./components/SectionIntro/Intro";
 import WhyAccess from "./components/SectionIntro/WhyAccess";
 import HowAccess from "./components/SectionIntro/HowAccess";
-
 import ContrastDemo from "./components/SectionVisualAccess/ContrastDemo";
 import FormDemo from "./components/SectionVisualAccess/FormDemo";
 import PreferencesToggle from "./components/SectionUserPref/PreferencesToggle";
-import Progress from "./components/Progress/Progress";
+// import Progress from "./components/Progress/Progress";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleChevronLeft, faCircleChevronRight } from "@fortawesome/free-solid-svg-icons";;
 
-function Layout({ children, nextPath, prevPath, currentStep, totalSteps = 6 }) {
+
+import "./App.css";
+
+function Layout({ children, nextPath, prevPath, currentStep, totalSteps }) {
   const navigate = useNavigate();
 
   return (
     <div>
-      <Progress currentStep={currentStep} totalSteps={totalSteps} />
+      {/* <Progress currentStep={currentStep} totalSteps={totalSteps} /> */}
 
       {children}
 
@@ -25,15 +30,33 @@ function Layout({ children, nextPath, prevPath, currentStep, totalSteps = 6 }) {
             className="nav-button back-button"
             onClick={() => navigate(prevPath)}
           >
-            ← Back
+            {/* ← Back */}
+
+            <FontAwesomeIcon
+              icon={faCircleChevronLeft}
+              size="2x"
+              color={"#FA9819"}
+              />
+
           </button>
+
+
+
+
         )}
         {nextPath && (
           <button
             className="nav-button next-button"
             onClick={() => navigate(nextPath)}
           >
-            Next →
+            {/* Next → */}
+
+            <FontAwesomeIcon
+              icon={faCircleChevronRight}
+              size="2x"
+              color={"#FA9819"}
+              />
+
           </button>
         )}
       </div>
@@ -42,17 +65,31 @@ function Layout({ children, nextPath, prevPath, currentStep, totalSteps = 6 }) {
 }
 
 export default function App() {
-  const totalSteps = 6;
+  const totalSteps = 7;
 
   return (
     <>
       <NavBar />
-      <Banner />
+      {/* <Banner /> */}
       <Routes>
         <Route
           path="/"
           element={
-            <Layout nextPath="/why" currentStep={1} totalSteps={totalSteps}>
+            <Layout prevPath="/" nextPath="/intro" currentStep={1} totalSteps={totalSteps}>
+              <Home />
+            </Layout>
+          }
+        />
+
+        <Route
+          path="/intro"
+          element={
+            <Layout
+              prevPath="/"
+              nextPath="/why"
+              currentStep={2}
+              totalSteps={totalSteps}
+            >
               <Intro />
             </Layout>
           }
@@ -62,9 +99,9 @@ export default function App() {
           path="/why"
           element={
             <Layout
-              prevPath="/"
+              prevPath="/intro"
               nextPath="/how"
-              currentStep={2}
+              currentStep={3}
               totalSteps={totalSteps}
             >
               <WhyAccess />
@@ -78,7 +115,7 @@ export default function App() {
             <Layout
               prevPath="/why"
               nextPath="/contrast"
-              currentStep={3}
+              currentStep={4}
               totalSteps={totalSteps}
             >
               <HowAccess />
@@ -90,22 +127,23 @@ export default function App() {
           path="/contrast"
           element={
             <Layout
-              prevPath="/why"
+              prevPath="/how"
               nextPath="/form"
-              currentStep={4}
+              currentStep={5}
               totalSteps={totalSteps}
             >
               <ContrastDemo />
             </Layout>
           }
         />
+
         <Route
           path="/form"
           element={
             <Layout
               prevPath="/contrast"
               nextPath="/prefs"
-              currentStep={5}
+              currentStep={6}
               totalSteps={totalSteps}
             >
               <FormDemo />
@@ -115,7 +153,7 @@ export default function App() {
         <Route
           path="/prefs"
           element={
-            <Layout prevPath="/form" currentStep={6} totalSteps={totalSteps}>
+            <Layout prevPath="/form" currentStep={7} totalSteps={totalSteps}>
               <PreferencesToggle />
             </Layout>
           }

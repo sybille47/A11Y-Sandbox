@@ -23,3 +23,9 @@
 .pref-item:hover {
   color: #111827;
 }
+/* @media (min-width: 768px) {
+  .user-prefs {
+    flex: 1;           /* share space evenly with other section elements */
+    /* align-self: flex-start; */
+  }
+} */

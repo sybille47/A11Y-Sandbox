@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faToggleOn, faToggleOff } from "@fortawesome/free-solid-svg-icons";
 import './SectionUserPref.css';
 
@@ -9,7 +9,7 @@ export default function UserPrefs() {
   const [responsive, setResponsive] = useState(false);
 
   return (
-    <section>
+    <section id="preferences">
     <div className="user-prefs">
       <div className="pref-item" onClick={() => setDarkMode(!darkMode)}>
         <FontAwesomeIcon
