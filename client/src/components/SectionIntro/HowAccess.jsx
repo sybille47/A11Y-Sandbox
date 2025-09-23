@@ -2,7 +2,7 @@ import './Intro.css';
 
 export default function WhyAccess () {
   return (
-    <section className="accessibility">
+    <section id="how"className="accessibility">
 
             <div className="section-content">
               <div className="subheading">
@@ -16,7 +16,7 @@ export default function WhyAccess () {
                   abbreviated as POUR:
                 </p>
 
-                <div className='flip-cards'>
+                <div className='cards'>
                   <div id='perceivable'>
                     <p><em>Perceivable</em></p>
                     <p>Information and user interface components must be presentable to users in ways they can perceive</p>

@@ -2,7 +2,7 @@ import './Home.css';
 
 export default function Home () {
   return (
-    <section id="intro" className="accessibility">
+    <section id="home" className="accessibility">
             <h2 className="section-title">
               <span className="section-number"></span> Welcome to the A11Y Sandbox! 🎯
             </h2>

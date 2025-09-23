@@ -7,17 +7,19 @@ import HowAccess from "./components/SectionIntro/HowAccess";
 import ContrastDemo from "./components/SectionVisualAccess/ContrastDemo";
 import FormDemo from "./components/SectionVisualAccess/FormDemo";
 import PreferencesToggle from "./components/SectionUserPref/PreferencesToggle";
+import ToolRefs from "./components/ToolsRefs/ToolsRefs";
+
 import Layout from "./components/Layout/Layout";
 
 export default function App() {
-  const totalSteps = 7;
+  const totalSteps = 8;
 
   return (
     <>
       <NavBar />
       <Routes>
         <Route
-          path="/"
+          path="/home"
           element={
             <Layout prevPath="/" nextPath="/intro" currentStep={1} totalSteps={totalSteps}>
               <Home />
@@ -28,7 +30,7 @@ export default function App() {
         <Route
           path="/intro"
           element={
-            <Layout prevPath="/" nextPath="/why" currentStep={2} totalSteps={totalSteps}>
+            <Layout prevPath="/home" nextPath="/why" currentStep={2} totalSteps={totalSteps}>
               <Intro />
             </Layout>
           }
@@ -73,11 +75,21 @@ export default function App() {
         <Route
           path="/prefs"
           element={
-            <Layout prevPath="/form" currentStep={7} totalSteps={totalSteps}>
+            <Layout prevPath="/form" nextPath="/tools" currentStep={7} totalSteps={totalSteps}>
               <PreferencesToggle />
             </Layout>
           }
         />
+
+        <Route
+          path="/tools"
+          element={
+            <Layout prevPath="/prefs" currentStep={8} totalSteps={totalSteps}>
+              <ToolRefs />
+          </Layout>
+        }
+      />
+
       </Routes>
     </>
   );

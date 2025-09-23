@@ -7,7 +7,7 @@ export default function FormDemo() {
   const [showGoodForm, setShowGoodForm] = useState(false);
 
   return (
-    <section id="forms" className="accessibility">
+    <section id="form" className="accessibility">
       <div className="section-content">
       <h3 className="subheading">Input forms</h3>
 
@@ -25,7 +25,7 @@ export default function FormDemo() {
             Then try to use the keyboard to access the input form, and enter details.
           </p>
           <p>
-            Try the form without accessibility first, then switch to the accessible version.
+            <em>Try the form without accessibility first, then switch to the accessible version.</em>
           </p>
         </div>
       </div>

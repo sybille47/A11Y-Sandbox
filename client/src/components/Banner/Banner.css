@@ -47,7 +47,7 @@
   background: url("./a11y_banner.png") center/cover no-repeat;
   margin-top: 1rem;
   padding: 1rem 1rem;
-  z-index: 1000; /* stays on top */
+  /* z-index: 1000; stays on top */
 }
 .small-banner h2 {
   font-size: clamp(1.5rem, 3vw, 7.5rem);
