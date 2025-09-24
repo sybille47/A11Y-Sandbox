@@ -4,10 +4,16 @@
   padding: 2rem;
   text-align: center;
 }
+.dark-mode .accessibility,
+.dark-mode .layout,
+#root {
+  background: #111827;
+}
 .accessibility {
   padding: 2rem 1rem;
   max-width: 1000px;
   margin: 0 auto;
+  border: dashed;
 }
 
 .section-title {
@@ -57,9 +63,7 @@
     text-align: left;
   }
 }
-
-/* Dark mode */
-/* Global Light/Dark mode */
+/* dark mode */
 .light-mode {
   background: #ffffff;
   color: #111827;
@@ -70,24 +74,27 @@
   color: #e5e7eb;
 }
 
-/* Example: Navbar styling */
-.dark-mode .navbar {
-  background: #1f2937; /* darker gray */
-  color: #f9fafb; /* near white */
-}
+/* .dark-mode .navbar {
+  background: #1f2937;
+  color: #f9fafb;
+} */
 
 .light-mode .navbar {
   background: #f9fafb;
   color: #111827;
 }
 
-/* Example: Layout container */
-.dark-mode .layout {
+/* .dark-mode .layout {
   background: #1f2937;
   border-color: #374151;
-}
+} */
 
 .light-mode .layout {
   background: #ffffff;
   border-color: #d1d5db;
+}
+
+body,
+.dark-mode {
+  background: #111827;
 }

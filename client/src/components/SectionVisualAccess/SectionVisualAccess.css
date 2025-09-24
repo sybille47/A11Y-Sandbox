@@ -60,7 +60,7 @@
 }
 
 /* Dots below carousel */
-.carousel-dots {
+/* .carousel-dots {
   margin-top: 1rem;
   display: flex;
   justify-content: center;
@@ -76,15 +76,15 @@
 }
 
 .dot.active {
-  background: #48749E;
-}
-/* pop up image in contrast cards */
+  background: #48749E; */
+/* } */
+/* pop up in contrast cards */
   .image-popup {
   position: absolute;
   bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(0,0,0,0.75);
+  background: #43ff64d9;
   color: #fff;
   padding: 6px 12px;
   border-radius: 8px;
@@ -100,13 +100,29 @@
   100% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
 }
 
-/* 📱 Mobile adjustments */
+/* responsive */
 @media (max-width: 768px) {
   .carousel-image {
     width: 100%;
     height: auto;
   }
 }
+
+@media (min-width: 768px) {
+  .section-content {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .subheading {
+    text-align: right;
+    padding-right: 1.5rem;
+  }
+
+  .description {
+    text-align: left;
+  }
+}
+
 /* a11y feature - screen readers*/
 .sr-only {
   position: absolute;
@@ -119,7 +135,9 @@
   border: 0;
 }
 
-
+.contrast-ratios {
+  margin-top: 10px;;
+}
 
 /* css for FormDemo, BadForm & GoodForm */
 .accessibility {
@@ -227,14 +245,14 @@
   height: 5rem;
   margin-top: 0.3rem;
   margin-left: 1rem;
-  padding: 1px 1px;
+  padding: 3px 3px;
   background: #FA9819;
   color: #000;
   border: none;
   border-radius: 50px;
   cursor: pointer;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 18px;
   font-family: "Rethink Sans", sans-serif;
   top: 50%;
 }
@@ -262,26 +280,10 @@ label {
   display: flex;
 }
 
-/* responsive */
-@media (min-width: 768px) {
-  .section-content {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-  .subheading {
-    text-align: right;
-    padding-right: 1.5rem;
-  }
-
-  .description {
-    text-align: left;
-  }
-}
 .code-content {
-  margin-top: 2rem; /* spacing from demo-area */
+  margin-top: 2rem;
 }
 
-  /* 🔒 Restrict ordering to the first section-content */
   .section-content:first-of-type .demo-area {
     order: 1;
   }
@@ -293,3 +295,17 @@ label {
   width: 50%;
   height: auto;
 }
+.light-mode {
+  background: #ffffff;
+  color: #111827;
+}
+
+.dark-mode .form-row,
+.dark-mode .form-container {
+  background: #111827;
+  color: #e5e7eb;
+}
+/* .dark-mode .form-row {
+  background: #1f2937;
+  color: #f9fafb;
+} */

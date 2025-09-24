@@ -14,32 +14,34 @@ function Layout({ children, nextPath, prevPath, currentStep, totalSteps }) {
   const showSmallBanner = location.pathname !== "/";
 
   return (
-    <div>
+    <div className="layout">
       {showSmallBanner ? <SmallBanner /> : <Banner />}
 
-      {children}
-
-    <div className="bottom-banner">
-      <div className="nav-buttons-container">
-        {prevPath && (
-          <button
-            className="nav-button back-button"
-            onClick={() => navigate(prevPath)}
-          >
-            <FontAwesomeIcon icon={faCircleChevronLeft} size="2x" color={"#FA9819"} />
-          </button>
-        )}
-
-        {nextPath && (
-          <button
-            className="nav-button next-button"
-            onClick={() => navigate(nextPath)}
-          >
-            <FontAwesomeIcon icon={faCircleChevronRight} size="2x" color={"#FA9819"} />
-          </button>
-        )}
+      <div className="layout-content">
+        {children}
       </div>
-    </div>
+
+      <div className="bottom-banner">
+        <div className="nav-buttons-container">
+          {prevPath && (
+            <button
+              className="nav-button back-button"
+              onClick={() => navigate(prevPath)}
+            >
+              <FontAwesomeIcon icon={faCircleChevronLeft} size="2x" color={"#FA9819"} />
+            </button>
+          )}
+
+          {nextPath && (
+            <button
+              className="nav-button next-button"
+              onClick={() => navigate(nextPath)}
+            >
+              <FontAwesomeIcon icon={faCircleChevronRight} size="2x" color={"#FA9819"} />
+            </button>
+          )}
+        </div>
+      </div>
     </div>
   );
 }

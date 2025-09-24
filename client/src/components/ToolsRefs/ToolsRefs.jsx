@@ -43,6 +43,21 @@ export default function ToolsRefs () {
                 Note: the focus must be visible enough on all
                 focusable elements.
               </p>
+
+              <div className="section-content">
+                <div className="subheading">
+                <h3>References</h3>
+              </div>
+
+              <div className="description">
+              <p>
+              <ul>
+                <li>WCAG 2 Standards and Guidelines by the World Wibe Web Consortium (W3C): <br />https://www.w3.org/WAI/standards-guidelines/wcag/</li>
+                <li>Cigital accessibility checklist: <br /> https://www.microassist.com/digital-accessibility/digital-accessibility-checklist/</li>
+              </ul>
+              </p>
+              </div>
+              </div>
               </div>
             </div>
           </section>

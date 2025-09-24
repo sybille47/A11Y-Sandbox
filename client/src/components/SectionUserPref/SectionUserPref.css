@@ -26,14 +26,7 @@
   margin-bottom: 1rem;
 }
 
-/* @media (min-width: 768px) {
-  .user-prefs {
-    flex: 1;           /* share space evenly with other section elements */
-    /* align-self: flex-start; */
-  }
-} */
-
-/* -------------------- DARK / LIGHT MODE -------------------- */
+/* dark mode */
 .light-mode {
   background: #ffffff;
   color: #111827;
@@ -54,8 +47,8 @@
   color: #e5e7eb;
 }
 
-/* -------------------- HIGH / LOW CONTRAST -------------------- */
-.high-contrast {
+/* high / low contrast */
+/* .high-contrast {
   --contrast-text: #000000;
   --contrast-bg: #ffffff;
 }
@@ -63,16 +56,14 @@
 .low-contrast {
   --contrast-text: #555555;
   --contrast-bg: #f5f5f5;
-}
+} */
 
-/* Apply contrast variables */
-.accessibility {
+/* .accessibility {
   background-color: var(--contrast-bg);
   color: var(--contrast-text);
   transition: all 0.3s ease;
-}
-
-/* -------------------- RESPONSIVE / FIXED LAYOUT -------------------- */
+} */
+/* responsive */
 .responsive-layout .section-content {
   display: flex;
   flex-direction: column;

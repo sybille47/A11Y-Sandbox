@@ -58,7 +58,7 @@ export default function ContrastDemo() {
         <h3 className="subheading">Contrast ratios</h3>
       <div className="description">
           <p>
-            When designing accessible websites, contrast ratio plays a crucial role in ensuring that text and interactive elements are readable for all users,
+            When designing accessible websites, contrast ratios play a crucial role in ensuring that text and interactive elements are readable for all users,
             including those with visual impairments.
           </p>
           <h4>What Is Contrast Ratio?</h4>
@@ -116,13 +116,9 @@ export default function ContrastDemo() {
             experiences.
           </p>
 
-          <h4>What Is Contrast Ratio?</h4>
+          <h4>How can contrasts be measured?</h4>
           <p>
-            Contrast ratio is the measure of luminance difference between two
-            colors, typically text and its background. It’s expressed as a ratio
-            ranging from 1:1 (no contrast, e.g., white on white) to 21:1
-            (maximum contrast, e.g., black on white). Higher contrast makes
-            content easier to read.
+            Dev Tool in browsers include contrast checkers to assess a web site. In addition, colour combinations can also be entered in contrast checkers to find combinations with accessible ratios.
           </p>
 
           <h4>WCAG Requirements</h4>
@@ -141,8 +137,9 @@ export default function ContrastDemo() {
             </li>
           </ul>
 
-          <h4>AAA Level Compliance</h4>
           <div className="contrast-ratios">
+          <h4>AAA Level Compliance</h4>
+            To meet AAA level requirements, the following contrast ratios should be met:
             Normal text requires 7:1. <br />
             Large text requires 4.5:1.
           </div>

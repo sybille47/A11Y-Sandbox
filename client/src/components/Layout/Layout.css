@@ -1,26 +1,26 @@
+.layout-content {
+  padding-bottom: 6rem;
+}
+
 .bottom-banner {
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 100vw; /* full width */
-  background: white; /* or your theme color */
+  width: 100vw;
+  background: white;
   border-top: 1px solid #ddd;
   display: flex;
-  justify-content: center; /* center nav buttons horizontally */
+  justify-content: center;
   align-items: center;
   padding: 1rem 0;
-  z-index: 1000; /* stays on top */
+  z-index: 1000;
 }
-
-/* ✅ Buttons inside the banner */
 .nav-buttons-container {
   display: flex;
-  gap: 4rem; /* space between back + next */
+  gap: 4rem;
   justify-content: center;
   align-items: center;
 }
-
-/* Button styling (your existing rules, tweaked for fixed bar) */
 .nav-button {
   background-color: white;
   border: none;
@@ -29,7 +29,7 @@
   font-size: 1rem;
   cursor: pointer;
   transition: background 0.2s ease-in-out;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15); /* subtle shadow */
+  box-shadow: 0px 2px 5px #00000026;
 }
 
 .nav-button:hover {
@@ -44,9 +44,7 @@
   background-color: #DEEEFE;
 }
 
-
-/* dark mode */
-/* Global Light/Dark mode */
+/* light/dark mode */
 .light-mode {
   background: #ffffff;
   color: #111827;
@@ -57,29 +55,26 @@
   color: #e5e7eb;
 }
 
-/* Example: Navbar styling */
-.dark-mode .navbar {
-  background: #1f2937; /* darker gray */
-  color: #f9fafb; /* near white */
-}
-
 .light-mode .navbar {
   background: #f9fafb;
   color: #111827;
 }
 
-/* Example: Layout container */
-.dark-mode .layout {
+.dark-mode .navbar {
+  background: #1f2937;
+  color: #f9fafb;
+}
+
+/* .dark-mode .layout {
   background: #1f2937;
   border-color: #374151;
 }
 
 .light-mode .layout {
   background: #ffffff;
-  border-color: #d1d5db;
-}
+  border-color: #d1d5db; */
+/* } */
 
-/* Light Mode */
 .light-mode .bottom-banner {
   background: #ffffff;
   border-top: 1px solid #ddd;
@@ -90,7 +85,6 @@
   color: #111827;
 }
 
-/* Dark Mode */
 .dark-mode .bottom-banner {
   background: #1f2937;
   border-top: 1px solid #374151;
@@ -106,3 +100,12 @@
   background-color: #4b5563;
 }
 
+.dark-mode .layout {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+.light-mode .layout {
+  background: #ffffff;
+  border-color: #d1d5db;
+}

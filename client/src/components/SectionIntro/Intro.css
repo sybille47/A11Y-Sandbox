@@ -1,4 +1,4 @@
-/* Flipcard container */
+/* flipcard container */
 .flipcards {
   display: flex;
   justify-content: center;
@@ -7,7 +7,7 @@
   flex-wrap: wrap; /* stack on smaller screens */
 }
 
-/* Card */
+/* card */
 .flipcard {
   background: transparent;
   width: 200px;
@@ -25,17 +25,16 @@
   transform-style: preserve-3d;
 }
 
-/* Flip on hover (desktop) */
+/* flip on hover / desktop */
 .flipcard:hover .flipcard-inner {
   transform: rotateY(180deg);
 }
 
-/* Flip on click/tap (mobile) */
+/* flip on click/tap / mobile */
 .flipcard.flipped .flipcard-inner {
   transform: rotateY(180deg);
 }
 
-/* Faces */
 .flipcard-front,
 .flipcard-back {
   position: absolute;
@@ -47,10 +46,9 @@
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px #00000026;
 }
 
-/* Front */
 .flipcard-front {
   background: #cd4900;
   color: #fff;
@@ -58,7 +56,6 @@
   font-size: 1.25rem;
 }
 
-/* Back */
 .flipcard-back {
   background: #f9f9f9;
   color: #333;
@@ -66,8 +63,6 @@
   font-size: 0.95rem;
   line-height: 1.4;
 }
-
-/* Add this to your App.css file */
 
 .cards {
   display: grid;
@@ -79,14 +74,14 @@
 .cards > div {
   background: white;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px #0000001a;
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .cards > div:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px #00000026;
 }
 
 .cards > div::before {
@@ -136,7 +131,6 @@
   background-color: #A3A3A3;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .cards {
     grid-template-columns: 1fr;
@@ -157,9 +151,6 @@
 }
 
 /* dark mode */
-
-
-
 .dark-mode .cards > div {
   background: #1f2937;
   color: #fff;
